@@ -22,10 +22,10 @@ export const ProductCard = styled.div`
 `;
 
 export const ProductImg = styled.img`
-    height: 250px;
+    height: 200px;
     min-width: 250px;
     max-width: 100%;
-    box-shadow: 8px 8px #fdc500;
+    box-shadow: 8px 8px #66ccff;
 `;
 
 export const ProductsHeading = styled.h1`

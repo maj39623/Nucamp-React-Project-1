@@ -16,8 +16,8 @@ const Hero = () => {
             <Sidebar isOpen={isOpen} toggle={toggle} />
             <HeroContent>
                 <HeroItems>
-                    <HeroH1>Greatest Car Ever</HeroH1>
-                    <HeroP>Gone In 60 Seconds</HeroP>
+                    <HeroH1>Your Dream Car Awaits</HeroH1>
+                    <HeroP>With a Click of a Button</HeroP>
                     <HeroBtn>Reserve Your Ride</HeroBtn>
                 </HeroItems>
             </HeroContent>
