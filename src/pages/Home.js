@@ -5,12 +5,15 @@ import { productData, productData2 } from '../components/Products/data';
 import Special from "../components/Special";
 import Footer from "../components/Footer";
 import { GlobalStyle } from "../globalStyles";
+import Modal from "../components/Modal/modal";
+import Popup from "../components/Modal/modal";
 
 function Home() {
   return (
     <>
         <GlobalStyle />
         <Hero />
+        <Popup />
         <Products heading='Featured Vehicles!' data={productData} />
         <Special />
         <Products heading='Pre-Order Yours Today!' data={productData2} />
