@@ -6,22 +6,27 @@ import { HeroContainer, HeroContent, HeroItems, HeroH1, HeroP, HeroBtn } from '.
 
 const Hero = () => {
     const [isOpen, setIsOpen] = useState(false)
+    const [isOpenPopup, setIsOpenPopup] = useState(false)
 
-    const toggle = () => {
+    const togglePopup = () => {
+        setIsOpenPopup(!isOpenPopup)
+    }
+
+    const toggleSidebar = () => {
         setIsOpen(!isOpen)
     }
 
     return (
         <HeroContainer>
             {/* navbar is toggleble */}
-            <Navbar toggle={toggle}/>
-            <Sidebar isOpen={isOpen} toggle={toggle} />
-            <Popup isOpen={isOpen} toggle={toggle}/>
+            <Navbar toggle={toggleSidebar}/>
+            <Sidebar isOpen={isOpen} toggle={toggleSidebar} />
+            <Popup isOpen={isOpenPopup} />
             <HeroContent>
                 <HeroItems>
                     <HeroH1>Your Dream Car Awaits</HeroH1>
                     <HeroP>With a Click of a Button</HeroP>
-                    <HeroBtn onClick={toggle}>Reserve Your Ride</HeroBtn>
+                    <HeroBtn onClick={togglePopup}>Reserve Your Ride</HeroBtn>
                 </HeroItems>
             </HeroContent>
         </HeroContainer>

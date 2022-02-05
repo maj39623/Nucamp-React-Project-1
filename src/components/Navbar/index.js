@@ -7,8 +7,7 @@ const Navbar = ({toggle}) => {
         <Nav>
             <NavLink to='/'>At Your Fingertips Car Sales</NavLink>
             <NavIcon onClick={toggle}>
-                <p>Inventory</p>
-                <Bars />
+              <Bars />
             </NavIcon>
         </Nav>
     </>

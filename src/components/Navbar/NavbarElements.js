@@ -1,6 +1,6 @@
 import styled from 'styled-components';
 import { NavLink as Link } from 'react-router-dom';
-import { AiFillCar } from 'react-icons/ai';
+import { AiOutlineBars } from 'react-icons/ai';
 
 export const Nav = styled.nav`
   background: transparent;
@@ -23,21 +23,23 @@ export const Nav2 = styled.nav`
 export const NavLink = styled(Link)`
   color: #fff;
   font-size: 2rem;
-  display: flex;
+  /* display: flex; */
   align-items: center;
   text-decoration: none;
   cursor: pointer;
-  @media screen and (max-width: 400px) {
+  @media screen and (max-width: 500px) {
     position: absolute;
     top: 10px;
     left: 25px;
+    font-size: 25px;
   }
 `;
 
 export const NavIcon = styled.div`
   display: block;
   position: absolute;
-  top: 0;
+  margin-left: 25px;
+  top: 25px;
   right: 0;
   cursor: pointer;
   color: #fff;
@@ -47,7 +49,8 @@ export const NavIcon = styled.div`
   }
 `;
 
-export const Bars = styled(AiFillCar)`
+export const Bars = styled(AiOutlineBars)`
   font-size: 2rem;
+  margin-left: 25px;
   transform: translate(-50%, -15%);
 `;
