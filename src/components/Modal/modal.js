@@ -6,7 +6,7 @@ const Popup = ({isOpen, toggle}) => {
     return (
     <>
         <Modal isOpen={isOpen} toggle={toggle}>
-            <ModalHeader>Login</ModalHeader>
+            <ModalHeader toggle>Login</ModalHeader>
             <ModalBody>
                 <Form>
                     <FormGroup>
@@ -19,8 +19,14 @@ const Popup = ({isOpen, toggle}) => {
                     </FormGroup>
                     <FormGroup check>
                         <Label check>
-                            <Input type="checkbox" name="remember"/>
+                            <Input type="checkbox" id='checkbox1' name="remember"/>
                             Remember me
+                        </Label>
+                    </FormGroup>
+                    <FormGroup check>
+                        <Label check>
+                            <Input type="checkbox" id='checkbox2' name="newuser"/>
+                            New User
                         </Label>
                     </FormGroup>
                     <Button type="submit" value="submit" color="primary">Login</Button>
