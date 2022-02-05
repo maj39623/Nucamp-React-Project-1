@@ -1,4 +1,5 @@
-import React from 'react';
+import React, { useState } from 'react';
+import Popup from '../Modal/modal';
 import {
     ProductsContainer,
     ProductWrapper,
@@ -12,10 +13,18 @@ import {
     ProductButton
 } from './ProductsElements';
 
-const Products = ({ heading, data }) => {
+const Products = ({ heading, data}) => {
+
+    const [isOpenPopup, setIsOpenPopup] = useState(false)
+
+    const togglePopup = () => {
+        setIsOpenPopup(!isOpenPopup)
+    }
+
     return (
         <ProductsContainer>
             <ProductsHeading>{heading}</ProductsHeading>
+            <Popup isOpen={isOpenPopup} />
             <ProductWrapper>
                 {data.map((product, index) => {
                     return (
@@ -25,7 +34,9 @@ const Products = ({ heading, data }) => {
                                 <ProductTitle>{product.name}</ProductTitle>
                                 <ProductDesc>{product.desc}</ProductDesc>
                                 <ProductPrice>{product.price}</ProductPrice>
-                                <ProductButton>{product.button}</ProductButton>
+                                <ProductButton onClick={togglePopup}>
+                                    {product.button}
+                                </ProductButton>
                             </ProductInfo>
                         </ProductCard>
                     );

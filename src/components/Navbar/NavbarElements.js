@@ -23,14 +23,16 @@ export const Nav2 = styled.nav`
 export const NavLink = styled(Link)`
   color: #fff;
   font-size: 2rem;
-  /* display: flex; */
+  display: flex;
   align-items: center;
+  padding-right: 25px;
   text-decoration: none;
   cursor: pointer;
-  @media screen and (max-width: 500px) {
+  @media screen and (max-width: 400px) {
     position: absolute;
     top: 10px;
     left: 25px;
+    width: 80%;
     font-size: 25px;
   }
 `;
